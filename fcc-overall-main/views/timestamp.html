@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Timestamp Microservice | freeCodeCamp.org</title>
+      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+    <h1 class="container">Timestamp Microservice</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="/">Home</a>
+        <a href="/timestamp">Timestamp Microservice</a>
+        <a href="/headerparser">Header Parser Microservice</a>
+        <a href="/urlshortener">URL Shortener Microservice</a>
+      </div>
+    </div>
+    
+    <img
+      class="image"
+      src="https://media3.giphy.com/media/3ov9jU4ycPvfrPTsly/giphy-downsized-large.gif" 
+      alt="Timestamp Microservice"
+    >
+
+    <div class="container">
+      <h3>Example Usage:</h3>
+      <ul>
+        <li><a href="timestamp/api/2015-12-25">[project url]/api/2015-12-25</a></li>
+        <li><a href="timestamp/api/1451001600000">[project url]/api/1451001600000</a></li>
+      </ul>
+
+      <h3>Example Output:</h3>
+      <p>
+        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+      </p>
+    </div>
+    <br>
+    <form action="timestamp/redirect/" method="POST">
+      <fieldset class="container">
+        <legend>Input a date in Unix or UTC Time:</legend>
+        <label>DATE:</label>
+        <input type="text" name="date" placeholder="2015-12-25" />
+        <input type="submit" value="GET JSON"/>
+      </fieldset>
+    </form>
+    <div class="footer">
+      <p>
+        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+      </p>
+    </div>
+  </body>
+</html>

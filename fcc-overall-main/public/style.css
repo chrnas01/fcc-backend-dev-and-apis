@@ -1,0 +1,101 @@
+/****** Main Styling ******/
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #222;
+}
+
+body {
+	background-image: url(https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png);
+	text-align: center;
+}
+
+code {
+	font-family: monospace;
+	padding: 2px;
+	color: black;
+	background-color: #fff;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin-bottom: 0.5em;
+  }
+
+a {
+	color: #2574A9;
+}
+
+legend {
+	color: black;
+	font-weight: bold;
+	background-color: white;
+}
+
+.image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px
+}
+
+.container {
+	font-family: 'Roboto', sans-serif;
+	background-color: #FaFaFa;
+	text-align: center;
+	line-height: 1.4em;
+}
+
+.footer {
+	color: white;
+}
+
+/****** Styling for DropDown Menu ******/
+
+  /* Dropdown Button */
+.dropbtn {
+	background-color: #04AA6D;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    float: left;
+	position: relative;
+    display: inline-block;
+}	
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

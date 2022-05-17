@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>URL Shortener Microservice | freeCodeCamp.org</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h1 class="container">URL Shortener Microservice</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="/">Home</a>
+        <a href="/timestamp">Timestamp Microservice</a>
+        <a href="/headerparser">Header Parser Microservice</a>
+        <a href="/urlshortener">URL Shortener Microservice</a>
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    
+    <form action="api/shorturl" method="POST">
+      <fieldset class="container">
+        <legend>URL Shortener</legend>
+        <label>URL:</label>
+        <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
+        <input type="submit" value="POST URL" />
+      </fieldset>
+    </form>
+    <div class="footer">
+      <p>
+      By <a href="https://www.freecodecamp.org">freeCodeCamp</a>
+      </p>
+    </div>
+  </body>
+</html>

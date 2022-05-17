@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Request Header Parser</title>
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/JavaScript">
+      function showMessage(){
+        let userInput = document.getElementById("message").value
+        if (userInput === "")
+          display_message.innerHTML= "Please Input a String !"
+        else {
+          let message = "Hey " + userInput + "!";
+          display_message.innerHTML = message;
+          fetch('/headerparser/api/whoami')
+          .then(response => response.json())
+          .then(function(data) { 
+            display_message.innerHTML += 
+            " I've found some information about your system: <br>Your IP Address is: " + data.ipaddress +
+            "<br>Your language is: " + data.language +
+            "<br>Your software is: " + data.software;
+          });
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1 class="container">Request Header Parser Microservice</h1>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="/">Home</a>
+      <a href="/timestamp">Timestamp Microservice</a>
+      <a href="/headerparser">Header Parser Microservice</a>
+      <a href="/urlshortener">URL Shortener Microservice</a>
+    </div>
+  </div>
+  
+  <img
+      class="image"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/200px-Rotating_earth_%28large%29.gif" 
+      alt="Header Parser Microservice"
+  >
+  
+  <div class="container">
+    <h3>Example Usage:</h3>
+    <p>
+      <a href="headerparser/api/whoami">[base url]/api/whoami</a>
+    </p>
+    <h3>Example Output:</h3>
+    <p>
+      <code>{"ipaddress":"::ffff:159.20.14.100","language":"en-US,en;q=0.5",<br>"software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}</code>
+    </p>
+  </div>
+
+  <fieldset class="container">
+    <legend>Hi! Whats your name?</legend>
+    <input type="text" id = "message" placeholder="Chris">
+    <input type="submit" onclick="showMessage()" value="Submit" />
+    <p> 
+      <span id = "display_message"></span> 
+    </p>
+  </fieldset>
+
+  <div class="footer">
+    <p>
+    By <a href="https://www.freecodecamp.org">freeCodeCamp</a>
+    </p>
+  </div>
+</body>
+
+</html>

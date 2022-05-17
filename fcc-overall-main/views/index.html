@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>APIs and Microservices</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <style>
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+        body {
+            background-image: url(https://wallpaperaccess.com/full/829012.jpg);
+        }
+        .image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+        }
+        .container {
+            background-color: #FaFaFa;
+            text-align: center;
+            line-height: 1.4em;
+        }
+        #mslabel {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="container"> A Combination of all APIs and Microservices Projects </h1>
+    <img  class = "image" src="https://comunytek.com/wp-content/uploads/2017/03/Microservices.png" alt="APIs and Microservices">
+    <br>
+    <form action="/redirect" method="POST">
+        <fieldset class ="container">
+            <label id="mslabel">Available Microservices:<br></label>
+            <input type="radio" id="timestamp" name="microservice" value="timestamp" checked/>
+            <label for="timestamp">Timestamp Microservice<br></label>
+            <input type="radio" id="headerparser" name="microservice" value="headerparser"/>
+            <label for="headerparser">Header Parser Microservice<br></label>
+            <input type="radio" id="urlshortener" name="microservice" value="urlshortener"/>
+            <label for="urlshortener">URL Shortener Microservice<br></label>
+            <input type="submit" value="Search"/>
+        </fieldset>
+    </form>
+</body>
+
+</html>
